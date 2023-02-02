@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url(../assets/bg-tablet-pattern.svg) no-repeat;
+  background-position: 140% -30%;
+  background-size: 900px;
+}
+
+#cta {
+  background-image: url(../assets/bg-simplify-section-desktop.svg);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    /* background-position: top; */
+    background-size: 500px;
+    background-position: -100% -5%;
+  }
+
+  #cta {
+    background-image: url(../assets/bg-simplify-section-mobile.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+#menu-toggle {
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  transition: 0.2s ease;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #111;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: translateY(7px);
+}
+
+.open .hamburger-middle {
+  opacity: 0;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg);
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg);
+}
+
+#mobile-menu {
+  top: 100%;
+  left: 1.5rem;
+  right: 1.5rem;
+  /* transform: translateX(-50%); */
+}
+
+.carousel-nav span.active {
+  background-color: hsl(12, 88%, 59%);
+}
+
+#email-input.error {
+  border: 1px solid red;
+}
+
+#message {
+  top: 110%;
+  left: 0;
+}
